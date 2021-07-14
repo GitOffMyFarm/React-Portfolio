@@ -1,14 +1,21 @@
 import React from "react"
+import Card from 'react-bootstrap/Card'
 
 const Project = ({ project }) => {
     return (
         <div>
-            <h3>{project.title}</h3>
-            <h4>{project.deployed}</h4>
-            <h4>{project.image}</h4>
-            <h4>{project.description}</h4>
-            <h4>{project.gitHubLink}</h4>
-        </div>
+        <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={project.image} />
+        <Card.Body>
+          <Card.Title>{project.title}</Card.Title>
+          <Card.Text>
+          {project.description}
+          </Card.Text>
+          <Card.Link href={project.deployed}>Deployed App</Card.Link>
+          <Card.Link href={project.gitHubLink}>GitHub Repo</Card.Link>
+        </Card.Body>
+      </Card>
+      </div>
     )
 }
 
