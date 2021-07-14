@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 import { useState } from 'react';
 
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
       <Header />
       <About />
       <Projects projects={projects} />
+      <Contact />
     </div>
   );
 }
